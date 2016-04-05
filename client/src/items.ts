@@ -4,7 +4,7 @@ import {Injectable} from 'angular2/core';
 import {Observable} from 'rxjs/Observable';
 import {items,selectedItem} from '../src/reducer';
 
-const BASE_URL = 'http://localhost:3000/items/';// 'http://localhost:3000/getItemsold';
+const BASE_URL =  'http://localhost:3000/items/';//'http://localhost:3000/getItemsold';
 const HEADER = { headers: new Headers({ 'Content-Type': 'application/json' }) };
 
 import {AppStore,Item} from './interface'
