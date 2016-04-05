@@ -4,7 +4,7 @@ import {Injectable} from 'angular2/core';
 import {Observable} from 'rxjs/Observable';
 import {items,selectedItem} from '../src/reducer';
 
-const BASE_URL =  'http://localhost:3000/items/';//'http://localhost:3000/getItemsold';
+const BASE_URL =  'http://localhost:3000/getItemsold';//'http://localhost:3000/items/'
 const HEADER = { headers: new Headers({ 'Content-Type': 'application/json' }) };
 
 import {AppStore,Item} from './interface'
@@ -21,8 +21,9 @@ export class ItemsService {
   loadItems() {
     this.http.get(BASE_URL)
         .map(res => res.json())
-        .map(payload => ({ type: 'ADD_ITEMS', payload }))
-        .subscribe(action => this.store.dispatch(action));
+        .map(payload => ({ type: 'ADD_ITEMS', payload:payload }))
+        .subscribe(
+           action => this.store.dispatch(action));
   }
 
   saveItem(item: Item) {

@@ -41,8 +41,7 @@ app.get('/getItemsold/',function(req,res){
    // console.log("token",token);
 
         res.status(200)
-            .json({
-                "items": [
+            .json( [
                     {
                         "id": 1,
                         "name": "Item 1",
@@ -54,12 +53,13 @@ app.get('/getItemsold/',function(req,res){
                         "description": "This is a description"
                     },
                     {
+                        "id": 5,
                         "name": "pppp",
-                        "description": "ppppp",
-                        "id": 5
+                        "description": "ppppp"
+
                     }
                 ]
-            });
+            );
 
 });
 
