@@ -1,0 +1,1 @@
+export {login} from './../component/login.ts'

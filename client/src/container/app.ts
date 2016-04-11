@@ -2,8 +2,9 @@ import {Component, Input, Output, EventEmitter, ChangeDetectionStrategy} from 'a
 import {ItemsService} from '../items';
 import {Observable} from 'rxjs/Observable';
 import {Store} from '@ngrx/store';
-import {ItemList,ItemDetail} from '../component'
+import {ItemList,ItemDetail,login} from '../component'
 import {AppStore,Item} from '../interface'
+
 
 //-------------------------------------------------------------------
 // MAIN COMPONENT
@@ -22,8 +23,9 @@ import {AppStore,Item} from '../interface'
       (saved)="saveItem($event)" (cancelled)="resetItem($event)"
       [item]="selectedItem | async">Select an Item</item-detail>
   </div>
+<login></login>
   `,
-    directives: [ItemList, ItemDetail],
+    directives: [ItemList, ItemDetail,login],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class App {
