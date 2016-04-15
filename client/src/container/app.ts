@@ -2,7 +2,7 @@ import {Component, Input, Output, EventEmitter, ChangeDetectionStrategy} from 'a
 import {ItemsService} from '../items';
 import {Observable} from 'rxjs/Observable';
 import {Store} from '@ngrx/store';
-import {ItemList,ItemDetail,login} from '../component'
+import {ItemList,ItemDetail,Login} from '../component'
 import {AppStore,Item} from '../interface'
 
 
@@ -10,7 +10,7 @@ import {AppStore,Item} from '../interface'
 // MAIN COMPONENT
 //-------------------------------------------------------------------
 @Component({
-    selector: 'my-app',
+    selector: 'app',
     providers: [],
     template: `
   <div class="mdl-cell mdl-cell--6-col">
@@ -25,7 +25,7 @@ import {AppStore,Item} from '../interface'
   </div>
 <login></login>
   `,
-    directives: [ItemList, ItemDetail,login],
+    directives: [ItemList, ItemDetail,Login],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class App {

@@ -16,6 +16,6 @@ import {loginStore} from '../interface'
 
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class login{
+export class Login{
 
 }
